@@ -1,5 +1,380 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  max-width: 1024px;
+  min-height: 5008px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  background-image: var(--background-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: var(--gap);
+}
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.header {
+  width: 100%;
+  min-height: 748px;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position-x: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: end;
+}
+.decorated-zone {
+  position: relative;
+  padding-block-end: var(--gap);
+}
+.header__theme-menu {
+  justify-self: center;
+  align-self: start;
+}
+.header__theme-menu-item {
+  width: 70px;
+  height: 26px;
+}
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+}
+.header__theme-menu-button {
+  width: 100%;
+  height: 100%;
+  color: var(--accent-color);
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+.header__theme-menu-button_active {
+  outline: solid 1px var(--accent-color);
+}
+.header__theme-menu-button:hover {
+  outline: solid 1px var(--accent-color);
+}
+.header__theme-menu-button:focus-visible {
+  border-bottom: solid var(--accent-color) 0.8px;
+}
+.header__title {
+  justify-self: start;
+  align-self: center;
+  margin-inline-start: -20px;
+}
+.title {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px #FF0070;
+  font-size: min(clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem), 157px);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 82%;
+  
+}
+.subtitle {
+  width: clamp(22.1875rem, -3.3125rem + 53.125vw, 30.6875rem);
+  justify-self: end;
+  align-self: center;
+  
+}
+.title-decor {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--subtitle-color);
+  background-color: var(--background-color);
+}
+.lamp {
+  width: 61px;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 3px;
+  background-image: url("../images/ellipse.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+
+}
+.lamp::before {
+  content: "REC";
+  color: var(--accent-color);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139%;
+
+}
+.decorated-zone::before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  border-top: solid 1px var(--accent-color);
+  border-right: solid 1px var(--accent-color);
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+.decorated-zone::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-inline-start: solid 1px var(--accent-color);
+  border-block-end: solid 1px var(--accent-color);
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
+/* Далее идут правила для секции focus */
+
+.focus {
+  display: grid;
+  grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+
+}
+.focus__title {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.section__title {
+  color: var(--accent-color);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+.focus__conten {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  gap: 10px;
+}
+.text {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.text__link {
+  text-shadow: 1.8px 1.8px var(--shadow);
+}
+.text__link:hover {
+  border-bottom: solid 1px var(--text-color);
+}
+.text__link:focus-visible {
+  border: var(--text-color) solid 1px;
+}
+
+/* Далее идет код для секции concentration */
+
+.concentretion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+.concentretion__title {
+  width: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem);
+}
+.concentretion__contents {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.concentration__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+/* Далее идет код для секции advices */
+
+.advices {
+  display: flex;
+  gap: 20px;
+}
+.advices__title {
+  width: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem);
+}
+.advices__subtitle {
+  font-weight: 400;
+}
+.advices__cotents {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.advices__content {
+  width: clamp(29.5rem, -3.6875rem + 69.1406vw, 40.5625rem);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Далее идет код для секции pictures */
+
+.pictures {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  overflow: hidden;
+}
+.pictures__contents {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem));
+  grid-template-rows: repeat(3, clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem)) clamp(5.5rem, 0.8125rem + 9.7656vw, 7.0625rem);
+  gap: 20px;
+  grid-template-areas: 
+  "sunset sunset ice-cream"
+  "tape books ice-cream"
+  "tape streat streat"
+  "tape streat streat";
+}
+.pictures__sunset {
+  grid-area: sunset;
+}
+.sunset {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pictures__ice-cream {
+  grid-area: ice-cream;
+}
+.ice-cream {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pictures__tape { 
+  grid-area: tape;
+
+}
+.tape {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pictures__streat {
+  grid-area: streat;
+
+}
+.streat {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pictures__books {
+  grid-area: books;
+}
+.books {
+  width: 100%;
+  height: 100%;
+}
+
+/* Далее идет код секции foooter */
+
+.footer {
+  width: 100%;
+  min-height: 768px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+
+/* Далее медиазапросы */
+
+@media (width < 1024px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+  .page {
+    width: 100%;
+  }
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+
+  }
+  .title-decor {
+    width: 100%;
+  }
+  .header,
+  .footer {
+    height: clamp(41.75rem, 22.4234rem + 86.618vw, 64rem);
+  }
+}
+
+@media (768px <= width < 1024px) {
+  .header {
+    max-height: 1024px;
+  }
+  .header__title {
+    align-self: center;
+  }
+  .subtitle {
+    align-self: start;
+  }
+  .concentretion__contents {
+    flex-direction: column;
+  }
+  .concentretion__content{
+    width: 100%;
+  }
+}
+
+@media (width < 768px) {
+  :root {
+    --gap: 10px;
+  }
+  .title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+  .header__title {
+    margin-inline-start: 0;
+  }
+  .subtitle {
+    align-items: end;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .section__title {
+    width: 355px;
+  }
+  .section__contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .advices__content {
+    width: 100%;
+    gap: 10px;
+  }
+  .focus__content {
+    width: 100%;
+  }
 }
