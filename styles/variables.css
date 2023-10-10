@@ -5,7 +5,9 @@
   --accent-color: #FF0070;
   --text-color:  #F1B2CE;
   --gap: 20px;
-  --font-family: "IBM Plex Mono", Bold, "Regular", sans-serif;
+  --page-gap: 60px;
+  --main-gap: 80px;
+  --font-family: "IBM Plex Mono", sans-serif;
   --background-image: url("../images/cover-image-dark.png");
   --shadow: #FF0070;
 }
