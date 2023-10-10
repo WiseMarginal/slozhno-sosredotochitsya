@@ -1,3 +1,3 @@
 # slozhno-sosredotochitsya
 Проект "Сложно сосредоточиться"
-https://github.com/WiseMarginal/slozhno-sosredotochitsya.git
+https://wisemarginal.github.io/slozhno-sosredotochitsya/
