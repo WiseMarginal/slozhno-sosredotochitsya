@@ -341,9 +341,6 @@
   .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
-  .header__title {
-    margin-inline-start: 0;
-  }
   .subtitle { 
     max-width: 355px;
     margin-block: 58px;
