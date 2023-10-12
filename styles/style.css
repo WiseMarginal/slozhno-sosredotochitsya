@@ -23,7 +23,7 @@
 
 .header {
   width: 100%;
-  max-height: var(--hght);
+  min-height: var(--hght);
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   align-items: end;
@@ -35,7 +35,6 @@
 .header__theme-menu {
   justify-self: center;
   align-self: start;
-  margin-block-end: 273px;
 }
 .header__theme-menu-item {
   width: 70px;
@@ -67,8 +66,6 @@
 }
 .header__title {
   justify-self: start;
-  align-self: end;
-  margin-inline-start: -20px;
 }
 .title {
   color: var(--title-color);
@@ -78,7 +75,6 @@
   font-weight: 700;
   font-style: normal;
   line-height: 82%;
-  
 }
 .subtitle {
   width: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
@@ -314,15 +310,9 @@
   }
 }
 @media (768px <= width < 1024px) {
-  :root {
-    --hght: 1004px;
-  }
   .header__theme-menu {
     justify-self: end;
-    margin-block: 172px;
-  }
-  .header__title {
-    align-self: end;
+    margin-block-start: 172px;
   }
   .subtitle {
     margin-block: 163px;
@@ -346,19 +336,17 @@
   }
   .header__theme-menu {
     justify-self: end;
-    margin-block: 65px;
+    margin-block-start: 65px;
   }
   .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
   .header__title {
-    align-self: start;
     margin-inline-start: 0;
   }
   .subtitle { 
     max-width: 355px;
-    margin-block-end: 58px;
-    margin-block-start: 55px;
+    margin-block: 58px;
   }
   .section {
     display: flex;
@@ -392,5 +380,11 @@
   .streat, 
   .tape {
     max-height: 230px;
+  }
+}
+@media (height > 0) {
+  .header,
+  .footer {
+    height: 97.9dvh;
   }
 }
